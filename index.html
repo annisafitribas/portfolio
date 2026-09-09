@@ -1,272 +1,897 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-        content="Portfolio An Nisa Fitri - Web Developer, System Analyst & Data Enthusiast.">
+    <meta
+        name="description"
+        content="Portfolio An Nisa Fitri — Web Developer, System Analyst & Data Enthusiast."
+    >
 
-    <meta name="author" content="An Nisa Fitri">
+    <title>An Nisa Fitri — Portfolio</title>
 
-    <title>An Nisa Fitri | Portfolio</title>
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
-    <!-- Icons -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         HEADER / NAVBAR
-    ========================== -->
+<header class="header" id="header">
 
-    <header class="header" id="header">
+    <div class="container nav-container">
 
-        <div class="container nav-container">
 
-            <a href="#home" class="logo">
-                <span class="logo-bracket">&lt;</span>
-                AF
-                <span class="logo-bracket">/&gt;</span>
+        <!-- LOGO -->
+        <a href="#home" class="logo">
+            <img src="assets/logo.png" alt="Logo An Nisa">
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navbar" id="navbar">
+
+            <a
+                href="#home"
+                class="nav-link active"
+            >
+                Home
             </a>
 
-            <nav class="navbar" id="navbar">
+            <a
+                href="#about"
+                class="nav-link"
+            >
+                About
+            </a>
 
-                <a href="#home" class="nav-link active">Home</a>
+            <a
+                href="#experience"
+                class="nav-link"
+            >
+                Experience
+            </a>
 
-                <a href="#about" class="nav-link">About</a>
+            <a
+                href="#organization"
+                class="nav-link"
+            >
+                Organization
+            </a>
 
-                <a href="#experience" class="nav-link">Experience</a>
+            <a
+                href="#skills"
+                class="nav-link"
+            >
+                Skills
+            </a>
 
-                <a href="#skills" class="nav-link">Skills</a>
+            <a
+                href="#projects"
+                class="nav-link"
+            >
+                Projects
+            </a>
 
-                <a href="#projects" class="nav-link">Projects</a>
+            <a
+                href="#education"
+                class="nav-link"
+            >
+                Education
+            </a>
 
-                <a href="#education" class="nav-link">Education</a>
+            <a
+                href="#contact"
+                class="nav-link"
+            >
+                Contact
+            </a>
 
-                <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
-            </nav>
 
-            <div class="nav-actions">
+        <!-- ACTION -->
 
-                <button
-                    class="theme-toggle"
-                    id="theme-toggle"
-                    aria-label="Toggle dark mode"
+        <div class="nav-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+            >
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-background">
+
+        <div class="hero-grid"></div>
+
+        <div class="hero-glow hero-glow-one"></div>
+
+        <div class="hero-glow hero-glow-two"></div>
+
+    </div>
+
+
+    <div class="container hero-container">
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content reveal">
+
+
+            <div class="hero-badge">
+
+                <span class="status-dot"></span>
+
+                Available for opportunities
+
+            </div>
+
+
+            <p class="hero-greeting">
+                Hello, I'm
+            </p>
+
+
+            <h1>
+
+                An Nisa Fitri
+
+                <span>
+                    A.Md.Kom
+                </span>
+
+            </h1>
+
+
+            <h2>
+
+                Web Developer
+
+                <span>&</span>
+
+                System Analyst
+
+            </h2>
+
+
+            <p class="hero-description">
+
+                Lulusan D3 Teknologi Informasi yang memiliki
+                ketertarikan pada pengembangan web, analisis sistem,
+                pengolahan data, dan pemanfaatan teknologi untuk
+                menyelesaikan permasalahan secara efektif.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-primary"
                 >
-                    <i class="fa-solid fa-moon"></i>
-                </button>
 
-                <button
-                    class="menu-toggle"
-                    id="menu-toggle"
-                    aria-label="Open menu"
+                    <i class="fa-solid fa-code"></i>
+
+                    View My Work
+
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
                 >
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+
+                    <i class="fa-regular fa-paper-plane"></i>
+
+                    Let's Talk
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-socials">
+
+                <a
+                    href="https://github.com/annisafitribas"
+                    target="_blank"
+                    aria-label="GitHub"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a
+                    href="mailto:annisafitribas@gmail.com.com"
+                    aria-label="Email"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/6285828390740"
+                    target="_blank"
+                    aria-label="WhatsApp"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
 
             </div>
 
         </div>
 
-    </header>
 
 
-    <main>
+        <!-- HERO VISUAL -->
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <div class="hero-visual reveal">
 
-        <section class="hero section" id="home">
 
-            <div class="hero-background">
-                <div class="hero-grid"></div>
-                <div class="hero-glow hero-glow-one"></div>
-                <div class="hero-glow hero-glow-two"></div>
+            <div class="floating-card floating-card-one">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div>
+
+                    <strong>
+                        Web Development
+                    </strong>
+
+                    <span>
+                        Laravel • PHP • JS
+                    </span>
+
+                </div>
+
             </div>
 
-            <div class="container hero-container">
 
-                <div class="hero-content reveal">
+            <div class="profile-card">
 
-                    <div class="hero-badge">
-                        <span class="status-dot"></span>
-                        Available for opportunities
-                    </div>
 
-                    <p class="hero-greeting">
-                        Halo, saya
-                    </p>
+                <div class="profile-card-top">
 
-                    <h1>
-                        An Nisa
-                        <span>Fitri.</span>
-                    </h1>
+                    <div class="window-buttons">
 
-                    <h2>
-                        Web Developer
-                        <span>&</span>
-                        System Analyst
-                    </h2>
-
-                    <p class="hero-description">
-                        Saya memiliki ketertarikan pada pengembangan sistem,
-                        website, administrasi, pengolahan data, dan teknologi
-                        digital. Saya senang mengubah kebutuhan menjadi solusi
-                        yang sederhana, terstruktur, dan bermanfaat.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fa-solid fa-arrow-right"></i>
-                            Lihat Project
-                        </a>
-
-                        <a href="#contact" class="btn btn-outline">
-                            Hubungi Saya
-                        </a>
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
                     </div>
 
-                    <div class="hero-socials">
+                    <span class="window-title">
+                        portfolio.js
+                    </span>
 
-                        <a
-                            href="https://github.com/annisafitribas"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                        </a>
+                </div>
 
-                        <a
-                            href="mailto:emailkamu@example.com"
-                            aria-label="Email"
-                        >
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
 
-                        <a
-                            href="https://wa.me/628xxxxxxxxxx"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="WhatsApp"
+                <div class="code-content">
+
+                    <div>
+                        <span class="code-number">01</span>
+                        <span class="code-keyword">const</span>
+                        <span class="code-variable">developer</span>
+                        =
+                        <span class="code-bracket">{</span>
+                    </div>
+
+
+                    <div class="code-indent">
+
+                        <span class="code-number">02</span>
+
+                        <span class="code-property">
+                            name
+                        </span>:
+
+                        <span class="code-string">
+                            "An Nisa Fitri"
+                        </span>,
+
+                    </div>
+
+
+                    <div class="code-indent">
+
+                        <span class="code-number">03</span>
+
+                        <span class="code-property">
+                            role
+                        </span>:
+
+                        <span class="code-string">
+                            "Web Developer"
+                        </span>,
+
+                    </div>
+
+
+                    <div class="code-indent">
+
+                        <span class="code-number">04</span>
+
+                        <span class="code-property">
+                            focus
+                        </span>:
+
+                        <span class="code-string">
+                            "System Analysis"
+                        </span>,
+
+                    </div>
+
+
+                    <div class="code-indent">
+
+                        <span class="code-number">05</span>
+
+                        <span class="code-property">
+                            passion
+                        </span>:
+
+                        <span class="code-string">
+                            "Technology"
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="code-number">06</span>
+
+                        <span class="code-bracket">
+                            };
+                        </span>
+
+                        <span class="code-cursor">
+                            |
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-two">
+
+                <i class="fa-solid fa-database"></i>
+
+                <div>
+
+                    <strong>
+                        Data & System
+                    </strong>
+
+                    <span>
+                        Analysis • Database
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="#about"
+        class="scroll-down"
+    >
+
+        <span>
+            Scroll Down
+        </span>
+
+        <i class="fa-solid fa-arrow-down"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="about section"
+    id="about"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                ABOUT ME
+            </span>
+
+            <h2>
+                Mengenal saya lebih dekat.
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <!-- PHOTO -->
+
+            <div class="about-image reveal">
+
+                <div class="about-photo">
+
+                    <div class="photo-placeholder">
+
+                        <img
+                            src="assets/foto-profil.jpg"
+                            alt="An Nisa Fitri"
                         >
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="about-decoration"></div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="about-content reveal">
+
+                <h3>
+                    Web Developer dengan ketertarikan pada
+                    sistem dan teknologi.
+                </h3>
+
+
+                <p>
+
+                    Saya merupakan lulusan Diploma III
+                    Teknologi Informasi dari Politeknik Negeri
+                    Tanah Laut yang memiliki ketertarikan pada
+                    pengembangan website, analisis sistem,
+                    pengolahan data, serta dokumentasi.
+
+                </p>
+
+
+                <p>
+
+                    Saya terbiasa mengerjakan pekerjaan
+                    administratif, mengelola data, berkomunikasi
+                    dengan berbagai pihak, serta mengembangkan
+                    solusi berbasis teknologi untuk mendukung
+                    kebutuhan pekerjaan.
+
+                </p>
+
+
+                <div class="about-info">
+
+                    <div class="info-item">
+
+                        <span>
+                            Education
+                        </span>
+
+                        <strong>
+                            D3 Teknologi Informasi
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Location
+                        </span>
+
+                        <strong>
+                            Pelaihari, Kalimantan Selatan
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Focus
+                        </span>
+
+                        <strong>
+                            Web & System Analysis
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong>
+                            Open to Opportunities
+                        </strong>
 
                     </div>
 
                 </div>
 
 
-                <div class="hero-visual reveal">
+                <a
+                    href="#contact"
+                    class="text-link"
+                >
 
-                    <div class="profile-card">
+                    Let's work together
 
-                        <div class="profile-card-top">
+                    <i class="fa-solid fa-arrow-right"></i>
 
-                            <div class="window-buttons">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                </a>
 
-                            <span class="window-title">
-                                portfolio.js
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section
+    class="experience section"
+    id="experience"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                EXPERIENCE
+            </span>
+
+            <h2>
+                Pengalaman profesional.
+            </h2>
+
+            <p>
+                Pengalaman kerja yang membentuk kemampuan
+                administrasi, pelayanan, koordinasi, dan
+                pengembangan sistem.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- PLN -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+
+                    <img
+                        src="assets/logo-pln.png"
+                        alt="Logo PLN"
+                    >
+
+                </div>
+
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+
+                            <span class="timeline-date">
+                                2025 — 2026
                             </span>
 
-                        </div>
+                            <h3>
+                                Pelayanan Pelanggan
+                            </h3>
 
-                        <div class="code-content">
-
-                            <div>
-                                <span class="code-number">01</span>
-                                <span class="code-keyword">const</span>
-                                <span class="code-variable">developer</span>
-                                =
-                                <span class="code-bracket">{</span>
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">name:</span>
-                                <span class="code-string">
-                                    "An Nisa Fitri"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">role:</span>
-                                <span class="code-string">
-                                    "Web Developer"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">focus:</span>
-                                <span class="code-string">
-                                    "System Analysis"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">location:</span>
-                                <span class="code-string">
-                                    "Indonesia"
-                                </span>,
-                            </div>
-
-                            <div>
-                                <span class="code-number">07</span>
-                                <span class="code-bracket">}</span>
-                            </div>
-
-                            <div class="code-cursor">
-                                _
-                            </div>
+                            <h4>
+                                PT PLN (Persero) ULP Banjarbaru
+                            </h4>
 
                         </div>
+
+
+                        <span class="experience-type">
+                            Work Experience
+                        </span>
 
                     </div>
 
-                    <div class="floating-card floating-card-one">
 
-                        <i class="fa-solid fa-code"></i>
+                    <p>
+
+                        Bertanggung jawab dalam pelayanan
+                        pelanggan secara langsung maupun melalui
+                        WhatsApp, pengelolaan CRM, penyusunan
+                        laporan harian, pencetakan dokumen,
+                        pengelolaan akses CRM, serta membantu
+                        publikasi informasi melalui Instagram PLN.
+
+                    </p>
+
+
+                    <div class="experience-tags">
+
+                        <span>
+                            Customer Service
+                        </span>
+
+                        <span>
+                            CRM
+                        </span>
+
+                        <span>
+                            Administration
+                        </span>
+
+                        <span>
+                            Reporting
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEALAND -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+
+                    <img
+                        src="assets/logo-sealand.png"
+                        alt="Logo Sealand Creative"
+                    >
+
+                </div>
+
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
 
                         <div>
-                            <strong>Web Development</strong>
-                            <span>Building digital solutions</span>
+
+                            <span class="timeline-date">
+                                2023 — 2026
+                            </span>
+
+                            <h3>
+                                Event Organizer
+                            </h3>
+
+                            <h4>
+                                Sealand Creative Event Organizer
+                            </h4>
+
                         </div>
+
+
+                        <span class="experience-type">
+                            Work Experience
+                        </span>
 
                     </div>
 
-                    <div class="floating-card floating-card-two">
 
-                        <i class="fa-solid fa-chart-line"></i>
+                    <p>
+
+                        Bertanggung jawab dalam perencanaan dan
+                        pelaksanaan berbagai kegiatan dan acara,
+                        mengoordinasikan tim serta kebutuhan
+                        operasional, berkomunikasi dengan klien,
+                        vendor, dan pihak terkait.
+
+                    </p>
+
+
+                    <div class="experience-tags">
+
+                        <span>
+                            Event Planning
+                        </span>
+
+                        <span>
+                            Coordination
+                        </span>
+
+                        <span>
+                            Administration
+                        </span>
+
+                        <span>
+                            Documentation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DARUL HIJRAH -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+
+                    <img
+                        src="assets/logo-darul-hijrah.png"
+                        alt="Logo Darul Hijrah Puteri"
+                    >
+
+                </div>
+
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
 
                         <div>
-                            <strong>Data & System</strong>
-                            <span>Analyze. Design. Improve.</span>
+
+                            <span class="timeline-date">
+                                2022 — 2023
+                            </span>
+
+                            <h3>
+                                Administrasi Keuangan
+                            </h3>
+
+                            <h4>
+                                Darul Hijrah Puteri
+                            </h4>
+
                         </div>
+
+
+                        <span class="experience-type">
+                            Work Experience
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Bertanggung jawab dalam pengelolaan
+                        administrasi dan keuangan Biro Rumah
+                        Tangga, mulai dari penyusunan dan pengajuan
+                        anggaran, proses pencairan dana, realisasi
+                        penggunaan dana, hingga penyusunan laporan
+                        pertanggungjawaban keuangan.
+
+                    </p>
+
+
+                    <div class="experience-tags">
+
+                        <span>
+                            Finance
+                        </span>
+
+                        <span>
+                            Administration
+                        </span>
+
+                        <span>
+                            Budgeting
+                        </span>
+
+                        <span>
+                            Reporting
+                        </span>
 
                     </div>
 
@@ -274,115 +899,118 @@
 
             </div>
 
-            <a href="#about" class="scroll-down">
-                <span>Scroll down</span>
-                <i class="fa-solid fa-arrow-down"></i>
-            </a>
+        </div>
 
-        </section>
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
 
-        <section class="about section" id="about">
+<!-- =========================================================
+     ORGANIZATION
+========================================================= -->
 
-            <div class="container">
+<section
+    class="organization section"
+    id="organization"
+>
 
-                <div class="section-heading reveal">
+    <div class="container">
 
-                    <span class="section-label">
-                        ABOUT ME
-                    </span>
 
-                    <h2>
-                        Mengenal saya lebih dekat.
-                    </h2>
+        <div class="section-heading reveal">
 
-                    <p>
-                        Perpaduan antara teknologi, analisis, dan
-                        kreativitas.
-                    </p>
+            <span class="section-label">
+                ORGANIZATION
+            </span>
+
+            <h2>
+                Pengalaman organisasi.
+            </h2>
+
+            <p>
+                Pengalaman berorganisasi yang membantu membangun
+                kemampuan kepemimpinan, administrasi, komunikasi,
+                dan koordinasi.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- KOLABORASI PEMUDA INDONESIA -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+
+                    <img
+                        src="assets/logo-kopi.png"
+                        alt="Logo Kolaborasi Pemuda Indonesia"
+                    >
 
                 </div>
 
 
-                <div class="about-grid">
+                <div class="timeline-card">
 
-                    <div class="about-image reveal">
+                    <div class="timeline-header">
 
-                        <div class="about-photo">
+                        <div>
 
-                            <div class="photo-placeholder">
-                                <i class="fa-solid fa-user"></i>
-                                <span>Your Photo</span>
-                            </div>
+                            <span class="timeline-date">
+                                Agustus 2023 — Sekarang
+                            </span>
+
+                            <h3>
+                                Sekretaris Umum
+                            </h3>
+
+                            <h4>
+                                Kolaborasi Pemuda Indonesia —
+                                Kabupaten Tanah Laut
+                            </h4>
 
                         </div>
 
-                        <div class="about-decoration"></div>
+
+                        <span class="experience-type">
+                            Organization
+                        </span>
 
                     </div>
 
 
-                    <div class="about-content reveal">
+                    <p>
 
-                        <h3>
-                            Saya membangun solusi digital
-                            dengan pendekatan yang terstruktur.
-                        </h3>
+                        Mengelola administrasi organisasi,
+                        membantu koordinasi kegiatan, menyusun
+                        dokumentasi dan surat-menyurat, serta
+                        mendukung pelaksanaan program organisasi.
 
-                        <p>
-                            Saya merupakan lulusan Diploma (D3)
-                            Teknologi Informasi dari Politeknik Negeri
-                            Tanah Laut dengan ketertarikan pada
-                            pengembangan website, analisis sistem,
-                            administrasi, dokumentasi, dan pengolahan
-                            data.
-                        </p>
+                    </p>
 
-                        <p>
-                            Saya memiliki pengalaman dalam lingkungan
-                            pelayanan pelanggan, administrasi keuangan,
-                            event organizer, serta pengembangan sistem.
-                            Pengalaman tersebut membantu saya memahami
-                            bahwa teknologi bukan hanya tentang kode,
-                            tetapi juga tentang bagaimana sebuah sistem
-                            dapat membantu pekerjaan menjadi lebih efektif.
-                        </p>
 
-                        <div class="about-info">
+                    <div class="experience-tags">
 
-                            <div class="info-item">
-                                <span>Nama</span>
-                                <strong>An Nisa Fitri</strong>
-                            </div>
+                        <span>
+                            Administration
+                        </span>
 
-                            <div class="info-item">
-                                <span>Pendidikan</span>
-                                <strong>D3 Teknologi Informasi</strong>
-                            </div>
+                        <span>
+                            Coordination
+                        </span>
 
-                            <div class="info-item">
-                                <span>Fokus</span>
-                                <strong>Web & System</strong>
-                            </div>
+                        <span>
+                            Documentation
+                        </span>
 
-                            <div class="info-item">
-                                <span>Domisili</span>
-                                <strong>Kalimantan Selatan</strong>
-                            </div>
-
-                        </div>
-
-                        <a
-                            href="#contact"
-                            class="text-link"
-                        >
-                            Mari terhubung
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        <span>
+                            Communication
+                        </span>
 
                     </div>
 
@@ -390,257 +1018,73 @@
 
             </div>
 
-        </section>
 
 
-        <!-- =========================
-             EXPERIENCE
-        ========================== -->
+            <!-- RESIMEN MAHASISWA -->
 
-        <section class="experience section" id="experience">
+            <div class="timeline-item reveal">
 
-            <div class="container">
+                <div class="timeline-marker">
 
-                <div class="section-heading reveal">
-
-                    <span class="section-label">
-                        EXPERIENCE
-                    </span>
-
-                    <h2>
-                        Pengalaman yang membentuk saya.
-                    </h2>
-
-                    <p>
-                        Beberapa pengalaman profesional dan organisasi
-                        yang pernah saya jalani.
-                    </p>
+                    <img
+                        src="assets/logo-menwa.png"
+                        alt="Logo Resimen Mahasiswa"
+                    >
 
                 </div>
 
 
-                <div class="timeline">
+                <div class="timeline-card">
 
+                    <div class="timeline-header">
 
-                    <!-- EXPERIENCE 1 -->
+                        <div>
 
-                    <div class="timeline-item reveal">
+                            <span class="timeline-date">
+                                Organisasi Kemahasiswaan
+                            </span>
 
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
+                            <h3>
+                                Kepala Urusan Administrasi
+                            </h3>
 
-                        <div class="timeline-card">
-
-                            <div class="timeline-header">
-
-                                <div>
-
-                                    <span class="timeline-date">
-                                        2025 — 2026
-                                    </span>
-
-                                    <h3>
-                                        Pelayanan Pelanggan
-                                    </h3>
-
-                                    <h4>
-                                        PT PLN (Persero) ULP Banjarbaru
-                                    </h4>
-
-                                </div>
-
-                                <span class="experience-type">
-                                    Professional
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Terlibat dalam pelayanan pelanggan baik
-                                secara langsung maupun melalui WhatsApp,
-                                pengelolaan CRM, penyusunan laporan harian,
-                                administrasi dokumen, serta pengelolaan
-                                informasi digital.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>Customer Service</span>
-                                <span>CRM</span>
-                                <span>Administration</span>
-                                <span>Reporting</span>
-
-                            </div>
+                            <h4>
+                                Resimen Mahasiswa
+                            </h4>
 
                         </div>
+
+
+                        <span class="experience-type">
+                            Organization
+                        </span>
 
                     </div>
 
 
-                    <!-- EXPERIENCE 2 -->
+                    <p>
 
-                    <div class="timeline-item reveal">
+                        Mendukung pengelolaan administrasi
+                        organisasi, dokumentasi kegiatan, serta
+                        membantu koordinasi berbagai kebutuhan
+                        administratif organisasi.
 
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-calendar-check"></i>
-                        </div>
-
-                        <div class="timeline-card">
-
-                            <div class="timeline-header">
-
-                                <div>
-
-                                    <span class="timeline-date">
-                                        2023 — 2026
-                                    </span>
-
-                                    <h3>
-                                        Event Organizer
-                                    </h3>
-
-                                    <h4>
-                                        Sealand Creative Event Organizer
-                                    </h4>
-
-                                </div>
-
-                                <span class="experience-type">
-                                    Professional
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Bertanggung jawab dalam perencanaan dan
-                                pelaksanaan kegiatan, koordinasi tim,
-                                kebutuhan operasional, komunikasi dengan
-                                klien dan vendor, serta administrasi
-                                kegiatan.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>Event Planning</span>
-                                <span>Team Coordination</span>
-                                <span>Administration</span>
-                                <span>Communication</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                    </p>
 
 
-                    <!-- EXPERIENCE 3 -->
+                    <div class="experience-tags">
 
-                    <div class="timeline-item reveal">
+                        <span>
+                            Administration
+                        </span>
 
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-wallet"></i>
-                        </div>
+                        <span>
+                            Organization
+                        </span>
 
-                        <div class="timeline-card">
-
-                            <div class="timeline-header">
-
-                                <div>
-
-                                    <span class="timeline-date">
-                                        2022 — 2023
-                                    </span>
-
-                                    <h3>
-                                        Administrasi Keuangan
-                                    </h3>
-
-                                    <h4>
-                                        Darul Hijrah Puteri
-                                    </h4>
-
-                                </div>
-
-                                <span class="experience-type">
-                                    Administration
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Mengelola administrasi dan keuangan Biro
-                                Rumah Tangga, menyusun pengajuan anggaran,
-                                membantu proses pencairan dana, mencatat
-                                realisasi penggunaan dana, serta menyusun
-                                laporan pertanggungjawaban.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>Finance</span>
-                                <span>Budgeting</span>
-                                <span>Reporting</span>
-                                <span>Microsoft Office</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ORGANIZATION -->
-
-                    <div class="timeline-item reveal">
-
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-
-                        <div class="timeline-card">
-
-                            <div class="timeline-header">
-
-                                <div>
-
-                                    <span class="timeline-date">
-                                        2023 — Sekarang
-                                    </span>
-
-                                    <h3>
-                                        Sekretaris Umum
-                                    </h3>
-
-                                    <h4>
-                                        Kolaborasi Pemuda Indonesia —
-                                        Kabupaten Tanah Laut
-                                    </h4>
-
-                                </div>
-
-                                <span class="experience-type">
-                                    Organization
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Mendukung administrasi organisasi,
-                                dokumentasi kegiatan, koordinasi internal,
-                                serta membantu memastikan kegiatan
-                                organisasi berjalan secara terstruktur.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>Leadership</span>
-                                <span>Administration</span>
-                                <span>Documentation</span>
-
-                            </div>
-
-                        </div>
+                        <span>
+                            Documentation
+                        </span>
 
                     </div>
 
@@ -648,758 +1092,1007 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             SKILLS
-        ========================== -->
 
-        <section class="skills section" id="skills">
+<!-- =========================================================
+     SKILLS
+========================================================= -->
 
-            <div class="container">
+<section
+    class="skills section"
+    id="skills"
+>
 
-                <div class="section-heading reveal">
+    <div class="container">
 
-                    <span class="section-label">
-                        SKILLS
-                    </span>
 
-                    <h2>
-                        Tools & kemampuan yang saya gunakan.
-                    </h2>
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                SKILLS
+            </span>
+
+            <h2>
+                Keahlian yang saya miliki.
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Pengembangan website dan aplikasi berbasis web.
+                </p>
+
+                <div class="skill-list">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                    <span>Laravel</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                </div>
+
+                <h3>
+                    System Analysis
+                </h3>
+
+                <p>
+                    Analisis kebutuhan dan perancangan sistem
+                    untuk menyelesaikan permasalahan.
+                </p>
+
+                <div class="skill-list">
+
+                    <span>System Analysis</span>
+                    <span>Flowchart</span>
+                    <span>UML</span>
+                    <span>Database</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-database"></i>
+
+                </div>
+
+                <h3>
+                    Data & Database
+                </h3>
+
+                <p>
+                    Pengolahan data, database, dan penyusunan
+                    laporan.
+                </p>
+
+                <div class="skill-list">
+
+                    <span>MySQL</span>
+                    <span>Excel</span>
+                    <span>Google Sheets</span>
+                    <span>Data Processing</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <h3>
+                    Administration
+                </h3>
+
+                <p>
+                    Pengelolaan dokumen, laporan, dan kebutuhan
+                    administratif.
+                </p>
+
+                <div class="skill-list">
+
+                    <span>Microsoft Office</span>
+                    <span>Documentation</span>
+                    <span>Reporting</span>
+                    <span>Administration</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="tools-section reveal">
+
+            <p class="tools-title">
+                TOOLS & TECHNOLOGIES
+            </p>
+
+
+            <div class="tools">
+
+                <span>
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </span>
+
+                <span>
+                    <i class="fa-brands fa-laravel"></i>
+                    Laravel
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-database"></i>
+                    MySQL
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-file-excel"></i>
+                    Excel
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-table"></i>
+                    Google Sheets
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-code"></i>
+                    VS Code
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section
+    class="projects section"
+    id="projects"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                PROJECTS
+            </span>
+
+            <h2>
+                Beberapa project yang pernah saya kerjakan.
+            </h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card featured reveal">
+
+
+                <div class="project-image project-blue">
+
+                    <div class="project-window">
+
+                        <div class="project-window-header">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="project-dashboard">
+
+                            <div class="dashboard-sidebar"></div>
+
+                            <div class="dashboard-content">
+
+                                <div class="dashboard-line"></div>
+
+                                <div class="dashboard-cards">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+                                <div class="dashboard-chart"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            Web Application
+                        </span>
+
+                        <div class="project-links">
+
+                            <a
+                                href="#"
+                                aria-label="View project"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Sistem Presensi Berbasis Lokasi
+                    </h3>
+
 
                     <p>
-                        Kombinasi kemampuan teknis dan soft skills
-                        untuk menyelesaikan pekerjaan secara efektif.
+
+                        Sistem presensi berbasis web dengan
+                        validasi lokasi menggunakan GPS,
+                        perhitungan radius, pencatatan jam masuk
+                        dan keluar, serta dashboard administrasi.
+
                     </p>
 
-                </div>
 
-
-                <div class="skills-grid">
-
-
-                    <!-- DEVELOPMENT -->
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <p>
-                            Membangun website dan aplikasi berbasis web
-                            dengan struktur yang terorganisir.
-                        </p>
-
-                        <div class="skill-list">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SYSTEM -->
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-diagram-project"></i>
-                        </div>
-
-                        <h3>
-                            System Analysis
-                        </h3>
-
-                        <p>
-                            Menganalisis kebutuhan pengguna dan
-                            menerjemahkannya menjadi rancangan sistem.
-                        </p>
-
-                        <div class="skill-list">
-
-                            <span>Requirement Analysis</span>
-                            <span>System Design</span>
-                            <span>Database</span>
-                            <span>Flowchart</span>
-                            <span>Documentation</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DATA -->
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-chart-simple"></i>
-                        </div>
-
-                        <h3>
-                            Data & Productivity
-                        </h3>
-
-                        <p>
-                            Mengelola data, membuat laporan, dan
-                            meningkatkan efisiensi pekerjaan administrasi.
-                        </p>
-
-                        <div class="skill-list">
-
-                            <span>Microsoft Excel</span>
-                            <span>Microsoft Word</span>
-                            <span>Google Sheets</span>
-                            <span>Data Processing</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DESIGN -->
-
-                    <div class="skill-card reveal">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-pen-nib"></i>
-                        </div>
-
-                        <h3>
-                            Design & Documentation
-                        </h3>
-
-                        <p>
-                            Membuat kebutuhan visual dan dokumentasi
-                            untuk mendukung komunikasi sebuah project.
-                        </p>
-
-                        <div class="skill-list">
-
-                            <span>Photo Design</span>
-                            <span>Documentation</span>
-                            <span>Visual Content</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tools-section reveal">
-
-                    <p class="tools-title">
-                        TECHNOLOGIES & TOOLS
-                    </p>
-
-                    <div class="tools">
+                    <div class="project-tech">
 
                         <span>
-                            <i class="fa-brands fa-html5"></i>
-                            HTML
-                        </span>
-
-                        <span>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            CSS
-                        </span>
-
-                        <span>
-                            <i class="fa-brands fa-js"></i>
-                            JavaScript
-                        </span>
-
-                        <span>
-                            <i class="fa-brands fa-php"></i>
-                            PHP
-                        </span>
-
-                        <span>
-                            <i class="fa-brands fa-laravel"></i>
                             Laravel
                         </span>
 
                         <span>
-                            <i class="fa-solid fa-database"></i>
+                            PHP
+                        </span>
+
+                        <span>
                             MySQL
                         </span>
 
                         <span>
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image project-purple">
+
+                    <div class="mini-code">
+
+                        <span class="pink">
+                            const
+                        </span>
+
+                        portfolio = {
+
+                        <div class="indent">
+
+                            name:
+                            <span class="yellow">
+                                "An Nisa"
+                            </span>,
+
+                        </div>
+
+                        <div class="indent">
+
+                            role:
+                            <span class="green">
+                                "Developer"
+                            </span>,
+
+                        </div>
+
+                        <div class="indent">
+
+                            skills:
+                            <span class="orange">
+                                ["PHP", "JS"]
+                            </span>
+
+                        </div>
+
+                        };
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            Web Design
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Personal Portfolio Website
+                    </h3>
+
+
+                    <p>
+
+                        Website portfolio pribadi untuk menampilkan
+                        profil, pengalaman, kemampuan, pendidikan,
+                        organisasi, dan project.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>
+                            HTML
                         </span>
 
                         <span>
-                            <i class="fa-solid fa-file-excel"></i>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image project-green">
+
+                    <div class="data-visual">
+
+                        <span
+                            class="data-bar bar-one"
+                        ></span>
+
+                        <span
+                            class="data-bar bar-two"
+                        ></span>
+
+                        <span
+                            class="data-bar bar-three"
+                        ></span>
+
+                        <span
+                            class="data-bar bar-four"
+                        ></span>
+
+                        <span
+                            class="data-bar bar-five"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            Data
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Data Processing & Reporting
+                    </h3>
+
+
+                    <p>
+
+                        Pengolahan data dan penyusunan laporan
+                        menggunakan spreadsheet untuk membantu
+                        kebutuhan administrasi dan analisis.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>
                             Excel
                         </span>
 
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-
-        <section class="projects section" id="projects">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="section-label">
-                        PROJECTS
-                    </span>
-
-                    <h2>
-                        Beberapa project yang saya kerjakan.
-                    </h2>
-
-                    <p>
-                        Project yang menunjukkan pengalaman saya dalam
-                        membangun solusi digital.
-                    </p>
-
-                </div>
-
-
-                <div class="projects-grid">
-
-
-                    <!-- PROJECT 1 -->
-
-                    <article class="project-card featured reveal">
-
-                        <div class="project-image project-blue">
-
-                            <div class="project-window">
-
-                                <div class="project-window-header">
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                </div>
-
-                                <div class="project-dashboard">
-
-                                    <div class="dashboard-sidebar"></div>
-
-                                    <div class="dashboard-content">
-
-                                        <div class="dashboard-line"></div>
-
-                                        <div class="dashboard-cards">
-
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-
-                                        </div>
-
-                                        <div class="dashboard-chart"></div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    Web Application
-                                </span>
-
-                                <div class="project-links">
-
-                                    <a
-                                        href="https://github.com/annisafitribas"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="GitHub project"
-                                    >
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                            <h3>
-                                Sistem Presensi Berbasis Lokasi
-                            </h3>
-
-                            <p>
-                                Aplikasi presensi berbasis web yang
-                                memanfaatkan lokasi pengguna untuk
-                                menentukan apakah pengguna berada dalam
-                                radius kantor. Sistem mencatat waktu
-                                masuk, waktu keluar, lokasi, dan status
-                                kehadiran.
-                            </p>
-
-                            <div class="project-tech">
-
-                                <span>Laravel</span>
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 2 -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image project-purple">
-
-                            <div class="mini-code">
-
-                                <div>
-                                    <span class="pink">const</span>
-                                    portfolio =
-                                    <span class="yellow">true</span>;
-                                </div>
-
-                                <div>
-                                    <span class="pink">function</span>
-                                    <span class="green">
-                                        buildWebsite
-                                    </span>() {
-                                </div>
-
-                                <div class="indent">
-                                    return
-                                    <span class="orange">
-                                        "creative"
-                                    </span>;
-                                </div>
-
-                                <div>}</div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    Personal Website
-                                </span>
-
-                                <div class="project-links">
-
-                                    <a
-                                        href="https://github.com/annisafitribas/portfolio"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="GitHub"
-                                    >
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                            <h3>
-                                Personal Portfolio Website
-                            </h3>
-
-                            <p>
-                                Website portfolio personal untuk
-                                menampilkan profil, pengalaman,
-                                kemampuan, dan project dengan desain
-                                responsive yang dapat diakses secara
-                                online melalui GitHub Pages.
-                            </p>
-
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>GitHub Pages</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 3 -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image project-green">
-
-                            <div class="data-visual">
-
-                                <div class="data-bar bar-one"></div>
-                                <div class="data-bar bar-two"></div>
-                                <div class="data-bar bar-three"></div>
-                                <div class="data-bar bar-four"></div>
-                                <div class="data-bar bar-five"></div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    Data & System
-                                </span>
-
-                            </div>
-
-                            <h3>
-                                Data Processing & Reporting
-                            </h3>
-
-                            <p>
-                                Pengolahan data dan penyusunan laporan
-                                menggunakan spreadsheet serta tools
-                                digital untuk membantu proses administrasi
-                                dan pengambilan keputusan.
-                            </p>
-
-                            <div class="project-tech">
-
-                                <span>Excel</span>
-                                <span>Google Sheets</span>
-                                <span>Data Processing</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             EDUCATION
-        ========================== -->
-
-        <section class="education section" id="education">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="section-label">
-                        EDUCATION
-                    </span>
-
-                    <h2>
-                        Latar belakang pendidikan.
-                    </h2>
-
-                </div>
-
-
-                <div class="education-card reveal">
-
-                    <div class="education-icon">
-
-                        <i class="fa-solid fa-graduation-cap"></i>
-
-                    </div>
-
-                    <div class="education-content">
+                        <span>
+                            Google Sheets
+                        </span>
 
                         <span>
-                            Diploma III
+                            Data Analysis
                         </span>
 
-                        <h3>
-                            Teknologi Informasi
-                        </h3>
-
-                        <h4>
-                            Politeknik Negeri Tanah Laut
-                        </h4>
-
-                        <p>
-                            Mempelajari dasar dan penerapan teknologi
-                            informasi, pengembangan perangkat lunak,
-                            sistem informasi, basis data, serta
-                            pemecahan masalah menggunakan teknologi.
-                        </p>
-
-                    </div>
-
-                    <div class="education-date">
-                        D3
                     </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             CTA
-        ========================== -->
 
-        <section class="cta-section">
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
 
-            <div class="container">
+<section
+    class="education section"
+    id="education"
+>
 
-                <div class="cta-card reveal">
+    <div class="container">
 
-                    <div class="cta-content">
 
-                        <span class="section-label">
-                            LET'S WORK TOGETHER
-                        </span>
+        <div class="section-heading reveal">
 
-                        <h2>
-                            Punya project atau peluang
-                            yang ingin didiskusikan?
-                        </h2>
+            <span class="section-label">
+                EDUCATION
+            </span>
 
-                        <p>
-                            Saya terbuka untuk kesempatan kerja,
-                            kolaborasi, project, maupun diskusi
-                            mengenai teknologi dan pengembangan sistem.
-                        </p>
+            <h2>
+                Latar belakang pendidikan.
+            </h2>
 
-                        <a
-                            href="#contact"
-                            class="btn btn-light"
-                        >
-                            Mulai Percakapan
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+        </div>
 
-                    </div>
 
-                    <div class="cta-decoration">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+        <div class="timeline">
+
+
+            <!-- =================================================
+                 D3 — PALING ATAS
+            ================================================== -->
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-marker">
+
+                    <img
+                        src="assets/logo-politala.png"
+                        alt="Logo Politeknik Negeri Tanah Laut"
+                    >
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+
+                            <span class="timeline-date">
+                                Diploma III
+                            </span>
+
+                            <h3>
+                                Teknologi Informasi
+                            </h3>
+
+                            <h4>
+                                Politeknik Negeri Tanah Laut
+                            </h4>
+
+                        </div>
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
+                        <span class="experience-type">
+                            D3
+                        </span>
 
-        <section class="contact section" id="contact">
+                    </div>
 
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="section-label">
-                        CONTACT
-                    </span>
-
-                    <h2>
-                        Mari terhubung.
-                    </h2>
 
                     <p>
-                        Jangan ragu untuk menghubungi saya untuk
-                        pekerjaan, project, atau sekadar berdiskusi.
+
+                        Mempelajari dasar dan penerapan teknologi
+                        informasi, pengembangan perangkat lunak,
+                        sistem informasi, basis data, serta
+                        pemecahan masalah menggunakan teknologi.
+
                     </p>
 
                 </div>
 
-
-                <div class="contact-grid">
-
-
-                    <div class="contact-info reveal">
-
-                        <h3>
-                            Let's talk.
-                        </h3>
-
-                        <p>
-                            Saya siap berdiskusi mengenai peluang
-                            profesional, project teknologi, maupun
-                            kolaborasi lainnya.
-                        </p>
+            </div>
 
 
-                        <div class="contact-items">
 
-                            <a
-                                href="mailto:emailkamu@example.com"
-                                class="contact-item"
-                            >
+            <!-- =================================================
+                 SMA
+            ================================================== -->
 
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-
-                                <div>
-                                    <span>Email</span>
-                                    <strong>
-                                        emailkamu@example.com
-                                    </strong>
-                                </div>
-
-                            </a>
+            <div class="timeline-item reveal">
 
 
-                            <a
-                                href="https://wa.me/628xxxxxxxxxx"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="contact-item"
-                            >
+                <div class="timeline-marker">
 
-                                <div class="contact-icon">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </div>
+                    <img
+                        src="assets/logo-sma.png"
+                        alt="Logo SMA"
+                    >
 
-                                <div>
-                                    <span>WhatsApp</span>
-                                    <strong>
-                                        Chat via WhatsApp
-                                    </strong>
-                                </div>
-
-                            </a>
+                </div>
 
 
-                            <a
-                                href="https://github.com/annisafitribas"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="contact-item"
-                            >
+                <div class="timeline-card">
 
-                                <div class="contact-icon">
-                                    <i class="fa-brands fa-github"></i>
-                                </div>
+                    <div class="timeline-header">
 
-                                <div>
-                                    <span>GitHub</span>
-                                    <strong>
-                                        github.com/annisafitribas
-                                    </strong>
-                                </div>
+                        <div>
 
-                            </a>
+                            <span class="timeline-date">
+                                Sekolah Menengah Atas
+                            </span>
+
+                            <h3>
+                                Pendidikan Menengah
+                            </h3>
+
+                            <h4>
+                                SMA
+                            </h4>
 
                         </div>
+
+
+                        <span class="experience-type">
+                            SMA
+                        </span>
 
                     </div>
 
 
-                    <div class="contact-card reveal">
+                    <p>
 
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </div>
+                        Menempuh pendidikan menengah serta aktif
+                        dalam berbagai kegiatan sekolah, kepanitiaan,
+                        dan kegiatan kepramukaan.
 
-                        <h3>
-                            Ready for the next challenge.
-                        </h3>
-
-                        <p>
-                            Saya selalu terbuka untuk mempelajari
-                            sesuatu yang baru dan mengerjakan
-                            tantangan yang menarik.
-                        </p>
-
-                        <a
-                            href="mailto:emailkamu@example.com"
-                            class="btn btn-primary"
-                        >
-                            Kirim Email
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
 
-    <footer class="footer">
+<!-- =========================================================
+     CTA
+========================================================= -->
 
-        <div class="container footer-container">
+<section class="cta-section">
 
-            <div class="footer-brand">
+    <div class="container">
 
-                <a href="#home" class="logo">
-                    <span class="logo-bracket">&lt;</span>
-                    AF
-                    <span class="logo-bracket">/&gt;</span>
-                </a>
+        <div class="cta-card reveal">
+
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    LET'S CONNECT
+                </span>
+
+
+                <h2>
+                    Mari bekerja sama dan
+                    menciptakan sesuatu yang berarti.
+                </h2>
+
 
                 <p>
-                    Building digital solutions with purpose.
+
+                    Saya terbuka untuk kesempatan kerja,
+                    kolaborasi, maupun project yang berkaitan
+                    dengan teknologi, administrasi, data,
+                    dan pengembangan sistem.
+
                 </p>
 
+
+                <a
+                    href="#contact"
+                    class="btn btn-light"
+                >
+
+                    Get In Touch
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
             </div>
+
+
+            <div class="cta-decoration">
+
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    class="contact section"
+    id="contact"
+>
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                CONTACT
+            </span>
+
+            <h2>
+                Be Connected.
+            </h2>
+
+        </div>
+
+
+        <div class="contact-content reveal">
+
+            <h3>
+                Let’s build something together.
+            </h3>
+
+
+            <div class="contact-columns">
+
+
+                <!-- KOLOM KIRI -->
+                <div class="contact-column">
+
+
+                    <!-- EMAIL -->
+                    <a
+                        href="mailto:annisafitribas@gmail.com"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                annisafitribas@gmail.com
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- WHATSAPP -->
+                    <a
+                        href="https://wa.me/6285828390740"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+                    
+                    <!-- PORTFOLIO -->
+                    <a
+                        href="https://annisafitribas.github.io/portfolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                Portfolio
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+                    
+                    <!-- GITHUB -->
+                    <a
+                        href="https://github.com/annisafitribas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                GitHub
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <!-- KOLOM KANAN -->
+                <div class="contact-column">
+
+
+                    <!-- LINKEDIN -->
+                    <a
+                        href="https://www.linkedin.com/in/annisafitribas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                LinkedIn
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- INSTAGRAM -->
+                    <a
+                        href="https://www.instagram.com/annisafitribas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                Instagram
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- TIKTOK -->
+                    <a
+                        href="https://www.tiktok.com/@annisafitribas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                TikTok
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- YOUTUBE -->
+                    <a
+                        href="https://www.youtube.com/@annisafitribas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+
+                        <div>
+                            <span>
+                                YouTube
+                            </span>
+
+                            <strong>
+                                annisafitribas
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+
+        <div class="footer-brand">
+
+            <!-- <a href="#home" class="logo-footer">
+                <img src="assets/logo-footer.png" alt="Logo An Nisa">
+            </a> -->
+
+
+            <p>
+                Web Developer & System Analyst.
+            </p>
 
 
             <div class="footer-socials">
@@ -1407,60 +2100,64 @@
                 <a
                     href="https://github.com/annisafitribas"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
+
                     <i class="fa-brands fa-github"></i>
+
                 </a>
 
+
                 <a
-                    href="mailto:emailkamu@example.com"
+                    href="mailto:annisafitribas@gmail.com.com"
                 >
+
                     <i class="fa-solid fa-envelope"></i>
+
                 </a>
+
 
                 <a
-                    href="https://wa.me/628xxxxxxxxxx"
+                    href="https://wa.me/6285828390740"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
+
                     <i class="fa-brands fa-whatsapp"></i>
+
                 </a>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    © <span id="year"></span>
-                    An Nisa Fitri. All rights reserved.
-                </p>
-
-                <p>
-                    Designed & Developed with ❤️
-                </p>
 
             </div>
 
         </div>
 
-    </footer>
 
+        <div class="footer-bottom">
 
-    <!-- BACK TO TOP -->
+            <span>
+                © 2026 An Nisa Fitri. All rights reserved.
+            </span>
 
-    <button
-        class="back-to-top"
-        id="back-to-top"
-        aria-label="Back to top"
-    >
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+            <span>
+                Built with HTML, CSS & JavaScript.
+            </span>
 
+        </div>
 
-    <!-- JAVASCRIPT -->
+    </div>
 
-    <script src="script.js"></script>
+</footer>
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

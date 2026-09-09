@@ -1,112 +1,137 @@
-/* =========================================
-   PORTFOLIO JAVASCRIPT
-========================================= */
+/* =========================================================
+   AN NISA FITRI — PORTFOLIO JAVASCRIPT
+   ========================================================= */
 
 
-/* =========================================
+/* =========================================================
    ELEMENTS
-========================================= */
+========================================================= */
 
 const header = document.getElementById("header");
 
 const navbar = document.getElementById("navbar");
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuToggle =
+    document.getElementById("menuToggle");
 
-const themeToggle = document.getElementById("theme-toggle");
+const themeToggle =
+    document.getElementById("themeToggle");
 
-const backToTop = document.getElementById("back-to-top");
+const backToTop =
+    document.getElementById("backToTop");
 
-const navLinks = document.querySelectorAll(".nav-link");
-
-const sections = document.querySelectorAll("section[id]");
+const navLinks =
+    document.querySelectorAll(".nav-link");
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
-const yearElement =
-    document.getElementById("year");
 
-
-/* =========================================
-   CURRENT YEAR
-========================================= */
-
-if (yearElement) {
-
-    yearElement.textContent =
-        new Date().getFullYear();
-
-}
-
-
-/* =========================================
+/* =========================================================
    MOBILE MENU
-========================================= */
+========================================================= */
 
-if (menuToggle) {
+if (menuToggle && navbar) {
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener(
+        "click",
+        () => {
 
-        navbar.classList.toggle("open");
+            navbar.classList.toggle("active");
 
-        const icon =
-            menuToggle.querySelector("i");
+            const icon =
+                menuToggle.querySelector("i");
 
-        if (navbar.classList.contains("open")) {
+            if (
+                navbar.classList.contains("active")
+            ) {
 
-            icon.classList.remove("fa-bars");
+                icon.classList.remove(
+                    "fa-bars"
+                );
 
-            icon.classList.add("fa-xmark");
+                icon.classList.add(
+                    "fa-xmark"
+                );
 
-        } else {
+            } else {
 
-            icon.classList.remove("fa-xmark");
+                icon.classList.remove(
+                    "fa-xmark"
+                );
 
-            icon.classList.add("fa-bars");
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
 
         }
-
-    });
+    );
 
 }
 
 
-/* =========================================
+/* =========================================================
    CLOSE MOBILE MENU
-========================================= */
+========================================================= */
 
-navLinks.forEach(link => {
+navLinks.forEach(
+    link => {
 
-    link.addEventListener("click", () => {
+        link.addEventListener(
+            "click",
+            () => {
 
-        navbar.classList.remove("open");
+                if (!navbar) return;
 
-        const icon =
-            menuToggle.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-
-        icon.classList.add("fa-bars");
-
-    });
-
-});
+                navbar.classList.remove(
+                    "active"
+                );
 
 
-/* =========================================
-   HEADER SCROLL
-========================================= */
+                const icon =
+                    menuToggle?.querySelector("i");
 
-function handleHeader() {
+                if (icon) {
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   HEADER ON SCROLL
+========================================================= */
+
+function updateHeader() {
+
+    if (!header) return;
+
 
     if (window.scrollY > 30) {
 
-        header.classList.add("scrolled");
+        header.classList.add(
+            "scrolled"
+        );
 
     } else {
 
-        header.classList.remove("scrolled");
+        header.classList.remove(
+            "scrolled"
+        );
 
     }
 
@@ -115,135 +140,44 @@ function handleHeader() {
 
 window.addEventListener(
     "scroll",
-    handleHeader
+    updateHeader
 );
 
-handleHeader();
+updateHeader();
 
 
-/* =========================================
-   ACTIVE NAVIGATION
-========================================= */
-
-function updateActiveNav() {
-
-    let currentSection = "";
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 150;
-
-        const sectionHeight =
-            section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY <
-            sectionTop + sectionHeight
-        ) {
-
-            currentSection =
-                section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        const href =
-            link.getAttribute("href");
-
-        if (
-            href === `#${currentSection}`
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateActiveNav
-);
-
-updateActiveNav();
-
-
-/* =========================================
-   BACK TO TOP
-========================================= */
-
-function handleBackToTop() {
-
-    if (window.scrollY > 500) {
-
-        backToTop.classList.add("show");
-
-    } else {
-
-        backToTop.classList.remove("show");
-
-    }
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    handleBackToTop
-);
-
-
-backToTop.addEventListener(
-    "click",
-    () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    }
-);
-
-
-/* =========================================
+/* =========================================================
    DARK MODE
-========================================= */
+========================================================= */
 
 const savedTheme =
-    localStorage.getItem("portfolio-theme");
+    localStorage.getItem(
+        "portfolio-theme"
+    );
 
 
 if (savedTheme === "dark") {
 
-    document.body.classList.add("dark");
-
-    updateThemeIcon();
+    document.body.classList.add(
+        "dark"
+    );
 
 }
 
 
 function updateThemeIcon() {
 
+    if (!themeToggle) return;
+
+
     const icon =
         themeToggle.querySelector("i");
 
+
     if (
-        document.body.classList.contains("dark")
+        document.body.classList.contains(
+            "dark"
+        )
     ) {
 
         icon.classList.remove(
@@ -269,53 +203,69 @@ function updateThemeIcon() {
 }
 
 
-themeToggle.addEventListener(
-    "click",
-    () => {
-
-        document.body.classList.toggle(
-            "dark"
-        );
-
-        const theme =
-            document.body.classList.contains("dark")
-                ? "dark"
-                : "light";
-
-        localStorage.setItem(
-            "portfolio-theme",
-            theme
-        );
-
-        updateThemeIcon();
-
-    }
-);
+updateThemeIcon();
 
 
-/* =========================================
-   SCROLL REVEAL
-========================================= */
+if (themeToggle) {
 
-const observer =
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            document.body.classList.toggle(
+                "dark"
+            );
+
+
+            const theme =
+                document.body.classList.contains(
+                    "dark"
+                )
+                    ? "dark"
+                    : "light";
+
+
+            localStorage.setItem(
+                "portfolio-theme",
+                theme
+            );
+
+
+            updateThemeIcon();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const revealObserver =
     new IntersectionObserver(
-        (entries) => {
+        (entries, observer) => {
 
-            entries.forEach(entry => {
+            entries.forEach(
+                entry => {
 
-                if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                    entry.target.classList.add(
-                        "visible"
-                    );
+                        entry.target.classList.add(
+                            "active"
+                        );
 
-                    observer.unobserve(
-                        entry.target
-                    );
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
         {
@@ -324,101 +274,265 @@ const observer =
     );
 
 
-revealElements.forEach(element => {
+revealElements.forEach(
+    element => {
 
-    observer.observe(element);
-
-});
-
-
-/* =========================================
-   SMOOTH ANCHOR SCROLL
-========================================= */
-
-document
-    .querySelectorAll('a[href^="#"]')
-    .forEach(anchor => {
-
-        anchor.addEventListener(
-            "click",
-            function (event) {
-
-                const targetId =
-                    this.getAttribute("href");
-
-                if (
-                    targetId === "#"
-                ) {
-
-                    return;
-
-                }
-
-
-                const target =
-                    document.querySelector(
-                        targetId
-                    );
-
-                if (!target) {
-
-                    return;
-
-                }
-
-
-                event.preventDefault();
-
-
-                const headerHeight =
-                    header.offsetHeight;
-
-
-                const targetPosition =
-                    target.offsetTop -
-                    headerHeight;
-
-
-                window.scrollTo({
-
-                    top: targetPosition,
-
-                    behavior: "smooth"
-
-                });
-
-            }
+        revealObserver.observe(
+            element
         );
 
-    });
+    }
+);
 
 
-/* =========================================
-   KEYBOARD ESCAPE
-========================================= */
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
-document.addEventListener(
-    "keydown",
-    event => {
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
 
-        if (event.key === "Escape") {
 
-            navbar.classList.remove(
-                "open"
+function updateActiveNav() {
+
+    const scrollPosition =
+        window.scrollY + 180;
+
+
+    sections.forEach(
+        section => {
+
+            const sectionTop =
+                section.offsetTop;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            const sectionId =
+                section.getAttribute("id");
+
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition <
+                    sectionTop + sectionHeight
+            ) {
+
+                navLinks.forEach(
+                    link => {
+
+                        link.classList.remove(
+                            "active"
+                        );
+
+
+                        const target =
+                            link.getAttribute(
+                                "href"
+                            );
+
+
+                        if (
+                            target ===
+                            `#${sectionId}`
+                        ) {
+
+                            link.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNav
+);
+
+updateActiveNav();
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!backToTop) return;
+
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add(
+                "show"
             );
 
-            const icon =
-                menuToggle.querySelector("i");
+        } else {
 
-            icon.classList.remove(
-                "fa-xmark"
-            );
-
-            icon.classList.add(
-                "fa-bars"
+            backToTop.classList.remove(
+                "show"
             );
 
         }
 
     }
 );
+
+
+if (backToTop) {
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+document
+    .querySelectorAll(
+        'a[href^="#"]'
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    const targetId =
+                        this.getAttribute(
+                            "href"
+                        );
+
+
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (!target) {
+                        return;
+                    }
+
+
+                    event.preventDefault();
+
+
+                    const headerHeight =
+                        header
+                            ? header.offsetHeight
+                            : 0;
+
+
+                    const targetPosition =
+                        target.offsetTop -
+                        headerHeight;
+
+
+                    window.scrollTo({
+
+                        top:
+                            targetPosition,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".timeline-marker img"
+    )
+    .forEach(
+        image => {
+
+            image.addEventListener(
+                "error",
+                function () {
+
+                    this.style.display =
+                        "none";
+
+
+                    const marker =
+                        this.parentElement;
+
+
+                    marker.classList.add(
+                        "image-error"
+                    );
+
+
+                    if (
+                        !marker.querySelector(
+                            ".fallback-icon"
+                        )
+                    ) {
+
+                        const icon =
+                            document.createElement(
+                                "i"
+                            );
+
+
+                        icon.className =
+                            "fa-solid fa-image fallback-icon";
+
+
+                        marker.appendChild(
+                            icon
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
