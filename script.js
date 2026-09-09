@@ -546,10 +546,21 @@ const musicToggle = document.getElementById("musicToggle");
 
 if (backgroundMusic && musicToggle) {
 
+    /* ========================================
+       PENGATURAN AWAL
+    ======================================== */
+
     // Volume awal
     backgroundMusic.volume = 0.35;
 
-    // Update tampilan tombol
+    // Pastikan musik mengulang
+    backgroundMusic.loop = true;
+
+
+    /* ========================================
+       UPDATE TOMBOL MUSIK
+    ======================================== */
+
     function updateMusicButton() {
 
         if (backgroundMusic.paused) {
@@ -565,6 +576,11 @@ if (backgroundMusic && musicToggle) {
                 "Turn on background music"
             );
 
+            musicToggle.setAttribute(
+                "title",
+                "Turn on background music"
+            );
+
         } else {
 
             // Musik hidup
@@ -577,58 +593,187 @@ if (backgroundMusic && musicToggle) {
                 "aria-label",
                 "Turn off background music"
             );
+
+            musicToggle.setAttribute(
+                "title",
+                "Turn off background music"
+            );
         }
     }
 
 
-    // ========================================
-    // AUTOPLAY
-    // ========================================
+    /* ========================================
+       COBA AUTOPLAY SAAT WEBSITE DIBUKA
+    ======================================== */
 
-    window.addEventListener("load", () => {
+    function tryPlayMusic() {
+
+        if (!backgroundMusic.paused) {
+            updateMusicButton();
+            return;
+        }
 
         backgroundMusic
             .play()
             .then(() => {
 
                 // Autoplay berhasil
+                console.log("Background music started.");
+
                 updateMusicButton();
+
+                // Hapus fallback karena tidak diperlukan lagi
+                removeInteractionListeners();
 
             })
-            .catch(() => {
+            .catch((error) => {
 
-                // Browser memblokir autoplay
+                // Autoplay diblokir browser
+                console.log(
+                    "Autoplay diblokir browser.",
+                    error
+                );
+
                 updateMusicButton();
-
             });
+    }
 
-    });
+
+    /* ========================================
+       FALLBACK SETELAH USER BERINTERAKSI
+    ======================================== */
+
+    function startMusicAfterInteraction(event) {
+
+        // Jangan trigger dari tombol musik
+        if (
+            event.target.closest &&
+            event.target.closest("#musicToggle")
+        ) {
+            return;
+        }
+
+        // Kalau musik masih mati, coba hidupkan
+        if (backgroundMusic.paused) {
+
+            backgroundMusic
+                .play()
+                .then(() => {
+
+                    console.log(
+                        "Music started after user interaction."
+                    );
+
+                    updateMusicButton();
+
+                    // Setelah berhasil, hapus listener
+                    removeInteractionListeners();
+
+                })
+                .catch((error) => {
+
+                    console.log(
+                        "Musik gagal diputar:",
+                        error
+                    );
+
+                });
+
+        } else {
+
+            removeInteractionListeners();
+
+        }
+    }
 
 
-    // ========================================
-    // TOGGLE BUTTON
-    // ========================================
+    /* ========================================
+       REMOVE FALLBACK LISTENERS
+    ======================================== */
+
+    function removeInteractionListeners() {
+
+        document.removeEventListener(
+            "click",
+            startMusicAfterInteraction
+        );
+
+        document.removeEventListener(
+            "touchstart",
+            startMusicAfterInteraction
+        );
+
+        document.removeEventListener(
+            "keydown",
+            startMusicAfterInteraction
+        );
+    }
+
+
+    /* ========================================
+       TAMBAHKAN FALLBACK INTERACTION
+    ======================================== */
+
+    document.addEventListener(
+        "click",
+        startMusicAfterInteraction
+    );
+
+    document.addEventListener(
+        "touchstart",
+        startMusicAfterInteraction
+    );
+
+    document.addEventListener(
+        "keydown",
+        startMusicAfterInteraction
+    );
+
+
+    /* ========================================
+       MUSIC TOGGLE BUTTON
+    ======================================== */
 
     musicToggle.addEventListener("click", (event) => {
 
-        // Supaya tidak terjadi double toggle
+        // Jangan biarkan event diteruskan
         event.stopPropagation();
+
+
+        // =====================================
+        // MUSIK SEDANG MATI
+        // =====================================
 
         if (backgroundMusic.paused) {
 
             backgroundMusic
                 .play()
                 .then(() => {
+
                     updateMusicButton();
+
+                    // Karena user sudah mengizinkan musik,
+                    // fallback tidak diperlukan lagi
+                    removeInteractionListeners();
+
                 })
                 .catch((error) => {
+
                     console.log(
                         "Musik tidak dapat diputar:",
                         error
                     );
+
                 });
 
-        } else {
+        }
+
+
+        // =====================================
+        // MUSIK SEDANG HIDUP
+        // =====================================
+
+        else {
 
             backgroundMusic.pause();
 
@@ -639,52 +784,10 @@ if (backgroundMusic && musicToggle) {
     });
 
 
-    // ========================================
-    // FALLBACK AUTOPLAY
-    // ========================================
-    // Kalau Chrome/Edge memblokir autoplay,
-    // musik akan mencoba menyala ketika user
-    // melakukan interaksi pertama di website.
-    // ========================================
+    /* ========================================
+       EVENT MUSIC
+    ======================================== */
 
-    function startMusicAfterInteraction(event) {
-
-        // Jangan jalankan ketika yang diklik
-        // adalah tombol musik
-        if (
-            event.target.closest &&
-            event.target.closest("#musicToggle")
-        ) {
-            return;
-        }
-
-        if (backgroundMusic.paused) {
-
-            backgroundMusic
-                .play()
-                .then(() => {
-                    updateMusicButton();
-                })
-                .catch(() => {});
-
-        }
-
-        // Hanya dijalankan sekali
-        document.removeEventListener(
-            "click",
-            startMusicAfterInteraction
-        );
-
-    }
-
-
-    document.addEventListener(
-        "click",
-        startMusicAfterInteraction
-    );
-
-
-    // Pastikan icon selalu sesuai
     backgroundMusic.addEventListener(
         "play",
         updateMusicButton
@@ -694,4 +797,20 @@ if (backgroundMusic && musicToggle) {
         "pause",
         updateMusicButton
     );
+
+
+    /* ========================================
+       SAAT HALAMAN SELESAI LOAD
+    ======================================== */
+
+    window.addEventListener("load", () => {
+
+        // Set icon terlebih dahulu
+        updateMusicButton();
+
+        // Coba autoplay
+        tryPlayMusic();
+
+    });
+
 }
