@@ -277,8 +277,6 @@ ul {
 }
 
 
-   /* LOGO */
-
 .logo {
     display: flex;
     align-items: center;
@@ -288,25 +286,22 @@ ul {
 .logo img {
     width: 42px;
     height: 42px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.logo-bracket {
-
-    color: var(--primary);
-}
-
-.logo-footer {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-footer img {
-    height: 42px;
-    width: auto;
     object-fit: contain;
+}
+
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+.dark .logo-light {
+    display: none;
+}
+
+.dark .logo-dark {
     display: block;
 }
 
