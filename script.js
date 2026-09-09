@@ -536,3 +536,162 @@ document
 
         }
     );
+
+/* ========================================
+   BACKGROUND MUSIC
+======================================== */
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (backgroundMusic && musicToggle) {
+
+    // Volume awal
+    backgroundMusic.volume = 0.35;
+
+    // Update tampilan tombol
+    function updateMusicButton() {
+
+        if (backgroundMusic.paused) {
+
+            // Musik mati
+            musicToggle.innerHTML =
+                '<i class="fa-solid fa-volume-xmark"></i>';
+
+            musicToggle.classList.remove("playing");
+
+            musicToggle.setAttribute(
+                "aria-label",
+                "Turn on background music"
+            );
+
+        } else {
+
+            // Musik hidup
+            musicToggle.innerHTML =
+                '<i class="fa-solid fa-volume-high"></i>';
+
+            musicToggle.classList.add("playing");
+
+            musicToggle.setAttribute(
+                "aria-label",
+                "Turn off background music"
+            );
+        }
+    }
+
+
+    // ========================================
+    // AUTOPLAY
+    // ========================================
+
+    window.addEventListener("load", () => {
+
+        backgroundMusic
+            .play()
+            .then(() => {
+
+                // Autoplay berhasil
+                updateMusicButton();
+
+            })
+            .catch(() => {
+
+                // Browser memblokir autoplay
+                updateMusicButton();
+
+            });
+
+    });
+
+
+    // ========================================
+    // TOGGLE BUTTON
+    // ========================================
+
+    musicToggle.addEventListener("click", (event) => {
+
+        // Supaya tidak terjadi double toggle
+        event.stopPropagation();
+
+        if (backgroundMusic.paused) {
+
+            backgroundMusic
+                .play()
+                .then(() => {
+                    updateMusicButton();
+                })
+                .catch((error) => {
+                    console.log(
+                        "Musik tidak dapat diputar:",
+                        error
+                    );
+                });
+
+        } else {
+
+            backgroundMusic.pause();
+
+            updateMusicButton();
+
+        }
+
+    });
+
+
+    // ========================================
+    // FALLBACK AUTOPLAY
+    // ========================================
+    // Kalau Chrome/Edge memblokir autoplay,
+    // musik akan mencoba menyala ketika user
+    // melakukan interaksi pertama di website.
+    // ========================================
+
+    function startMusicAfterInteraction(event) {
+
+        // Jangan jalankan ketika yang diklik
+        // adalah tombol musik
+        if (
+            event.target.closest &&
+            event.target.closest("#musicToggle")
+        ) {
+            return;
+        }
+
+        if (backgroundMusic.paused) {
+
+            backgroundMusic
+                .play()
+                .then(() => {
+                    updateMusicButton();
+                })
+                .catch(() => {});
+
+        }
+
+        // Hanya dijalankan sekali
+        document.removeEventListener(
+            "click",
+            startMusicAfterInteraction
+        );
+
+    }
+
+
+    document.addEventListener(
+        "click",
+        startMusicAfterInteraction
+    );
+
+
+    // Pastikan icon selalu sesuai
+    backgroundMusic.addEventListener(
+        "play",
+        updateMusicButton
+    );
+
+    backgroundMusic.addEventListener(
+        "pause",
+        updateMusicButton
+    );
+}

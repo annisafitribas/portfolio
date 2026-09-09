@@ -3356,3 +3356,96 @@ ul {
     }
 
 }
+
+/* ========================================
+   BACKGROUND MUSIC
+======================================== */
+
+.music-toggle {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background: var(--card-bg);
+    color: var(--text-color);
+
+    font-size: 15px;
+    cursor: pointer;
+
+    z-index: 999;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Hover */
+.music-toggle:hover {
+    transform: translateY(-3px);
+
+    background: var(--primary-color);
+    color: #fff;
+
+    border-color: var(--primary-color);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Saat diklik */
+.music-toggle:active {
+    transform: scale(0.94);
+}
+
+/* Icon */
+.music-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* Animasi kecil saat musik menyala */
+.music-toggle.playing i {
+    animation: musicPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .music-toggle {
+        left: 20px;
+        bottom: 20px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+}
