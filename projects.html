@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semua Proyek — An Nisa Fitri — Web Developer, Data Analyst & Data Enthusiast.">
+    <title>Semua Proyek — An Nisa Fitri</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header" id="header">
+    <div class="container nav-container">
+        <!-- LOGO -->
+        <a href="index.html#home" class="logo">
+            <img src="assets/logo.png" alt="Logo An Nisa" class="logo-light">
+            <img src="assets/logo-white.png" alt="Logo An Nisa" class="logo-dark">
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#experience" class="nav-link">Experience</a>
+            <a href="index.html#organization" class="nav-link">Organization</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="index.html#projects" class="nav-link active">Projects</a>
+            <a href="index.html#education" class="nav-link">Education</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- ACTION -->
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- PROJECTS LIST SECTION -->
+<section class="projects section" id="all-projects" style="padding-top: 120px;">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="section-label">ALL PROJECTS</span>
+            <h2>Semua Daftar Proyek.</h2>
+            <p>Berikut adalah arsip lengkap proyek, sistem, dan tugas pengembangan yang pernah saya kerjakan.</p>
+        </div>
+
+        <!-- GRID SEMUA PROYEK (TAMBAHKAN SISA PROYEK DI SINI) -->
+        <div class="projects-grid">
+
+            <!-- PROYEK 4 -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="assets/project-4.jpg" alt="Proyek 4">
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Administration • Sistem Keuangan</span>
+                    <h3>Sistem Pengelolaan Anggaran Biro</h3>
+                    <p style="text-align: justify;">
+                        Pengembangan sistem pencatatan keuangan dan administrasi realisasi anggaran untuk mendukung efisiensi biro rumah tangga.
+                    </p>
+                    <div class="project-tags">
+                        <span>Excel</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/annisafitribas" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"> Code</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYEK 5 -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="assets/project-5.jpg" alt="Proyek 5">
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Data Analysis • Laporan</span>
+                    <h3>Analisis Data Pelanggan & CRM</h3>
+                    <p style="text-align: justify;">
+                        Pengolahan dan rekapitulasi data layanan pengaduan serta work order pelanggan berbasis sistem CRM PLN.
+                    </p>
+                    <div class="project-tags">
+                        <span>Data Analysis</span>
+                        <span>CRM</span>
+                        <span>Reporting</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/annisafitribas" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"> Code</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYEK 6 -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="assets/project-6.jpg" alt="Proyek 6">
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Documentation • Organization</span>
+                    <h3>Arsip & Sistem Administrasi Organisasi</h3>
+                    <p style="text-align: justify;">
+                        Penyusunan basis data surat-menyurat dan dokumentasi digital terpusat untuk kegiatan Dewan Pengurus Daerah.
+                    </p>
+                    <div class="project-tags">
+                        <span>Administration</span>
+                        <span>Documentation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/annisafitribas" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"> Code</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TOMBOL KEMBALI KE HOME -->
+        <div class="projects-cta reveal" style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#projects" class="btn btn-outline">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <p>Web Developer & Data Analyst.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/annisafitribas" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:annisafitribas@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/6285828390740" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 An Nisa Fitri. All rights reserved.</span>
+            <span>Built with HTML, CSS & JavaScript.</span>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
